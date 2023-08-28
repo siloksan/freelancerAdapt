@@ -20,8 +20,6 @@
     object-fit: cover;
 }
 
-/*------------------------------------------*/
-
 /*------------HEADER----------------*/
 .header {
     position: absolute;
@@ -99,15 +97,22 @@
     }
 }
 
-/*-----------------------MAIN----------------------------*/
+/*-----------------------page----------------------------*/
 .page {
- flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 .page__main-block {
     position: relative;
 }
 
+.page__services {
+    margin: -111px 0 0 0;
+    position: relative;
+    z-index: 2;
+}
+
+/*------------MAIN-BLOCK------------------------------------*/
 /*.main-block {*/
 
 /*}*/
@@ -181,7 +186,7 @@
 }
 
 @media (max-width: 1300px) {
-    .main-block__image img{
+    .main-block__image img {
         object-position: right;;
     }
 }
@@ -190,10 +195,12 @@
     .main-block__image {
         opacity: .6;
     }
+
     .main-block__text {
         color: #3b3b3b;
 
     }
+
     .main-block__body {
         padding: 120px 0 191px;
     }
@@ -211,6 +218,90 @@
     }
 
     .main-block__button {
-      flex: 1 1 100%;
+        flex: 1 1 100%;
     }
+}
+
+/*------SERVICES------------------------*/
+.services {
+
+}
+
+.services-container {
+
+}
+
+@media (min-width: 670px) {
+    .services_body {
+        display: flex;
+        margin: 0 -15px -30px;
+        flex-wrap: wrap;
+    }
+
+    .services_column {
+        padding: 0 15px;
+    }
+}
+
+.services_column {
+    flex: 0 1 33.33%;
+}
+
+@media (max-width: 992px) {
+    .services_column {
+        flex: 0 1 50%;
+    }
+
+    .services_column:last-child {
+        flex: 1 1 100%;
+    }
+
+    .services_column:not(:last-child) {
+        margin: 0 0  30px 0;
+    }
+}
+
+.services__item {
+    height: 100%;
+    box-shadow: 0 13px 19px 0 rgba(0, 0, 0, 0.07);
+    background-color: #fff;
+    padding: 35px;
+}
+
+@media (max-width: 479px) {
+    .services__item {
+        padding: 25px;
+    }
+}
+.item_service_green {
+    background-color: #0D5C63;
+}
+
+.item_service_green .item-service__title {
+    color: #fff;
+}
+
+.item_service_green .item-service__text {
+    color: #fff;
+}
+
+.item_service > *:not(:last-child) {
+    margin: 0 0 10px 0;
+}
+
+.item-service__icon {
+
+}
+
+.item-service__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 133%;
+}
+
+.item-service__text {
+    font-size: 14px;
+    line-height: 142%;
+    font-weight: 500;
+    color: #737373;
 }
